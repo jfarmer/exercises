@@ -247,12 +247,7 @@ end
 
 
 if __FILE__ == $PROGRAM_NAME
-  require 'pp'
   require 'benchmark'
-
-  def rand_array(size, range)
-    Array.new(size) { rand(range) }
-  end
 
   MAX_RAND = 100000000
   RAND_RANGE = -MAX_RAND..MAX_RAND
