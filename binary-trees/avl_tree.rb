@@ -1,4 +1,5 @@
 # require_relative 'binary_search_tree'
+require_relative 'scanl'
 
 # The idea behind an AVL tree is to guarantee that the
 # difference in height between any node's left and right
@@ -43,52 +44,58 @@ def AVLTree(value, left = EmptyTree, right = EmptyTree)
 end
 
 class EmptyTree
-  def self.insert(value)
-    AVLTree(value)
-  end
+  class << self
+    def insert(value)
+      AVLTree(value)
+    end
 
-  def self.left
-    EmptyTree
-  end
+    def left
+      EmptyTree
+    end
 
-  def self.right
-    EmptyTree
-  end
+    def right
+      EmptyTree
+    end
 
-  def self.find(value)
-    nil
-  end
+    def find(value)
+      nil
+    end
 
-  def self.find_tree(value)
-    nil
-  end
+    def find_tree(value)
+      nil
+    end
 
-  def self.include?(value)
-    false
-  end
+    def include?(value)
+      false
+    end
 
-  def self.remove(value)
-    EmptyTree
-  end
+    def remove(value)
+      EmptyTree
+    end
 
-  def self.value
-    nil
-  end
+    def value
+      nil
+    end
 
-  def self.height
-    0
-  end
+    def height
+      0
+    end
 
-  def self.empty?
-    true
-  end
+    def size
+      0
+    end
 
-  def self.present?
-    !empty?
-  end
+    def empty?
+      true
+    end
 
-  def self.sexp
-    []
+    def present?
+      !empty?
+    end
+
+    def sexp
+      []
+    end
   end
 end
 
@@ -114,8 +121,16 @@ class AVLTree
     @_height ||= 1 + [left.height, right.height].max
   end
 
+  def size
+    @_size ||= 1 + left.size + right.size
+  end
+
   def max
     @_max ||= right.present? ? right.max : self.value
+  end
+
+  def min
+    @_min ||= left.present? ? left.min : self.value
   end
 
   def find_tree(value)
@@ -239,44 +254,37 @@ if __FILE__ == $PROGRAM_NAME
     Array.new(size) { rand(range) }
   end
 
-  MAX_RAND = 100000
-  BASE_SIZE = 100
-  ITERATIONS = 10000
+  MAX_RAND = 100000000
+  RAND_RANGE = -MAX_RAND..MAX_RAND
 
-  trees = (0..5).reduce({}) do |hash, k|
-    size = BASE_SIZE * 10**k
-    tree = rand_array(BASE_SIZE * 10**k, -MAX_RAND..MAX_RAND).reduce(EmptyTree) { |t, val| t.insert(val) }
-    puts "Tree of #{size} has height #{tree.height}"
+  BASE_SIZE = 2**8
+  ITERATIONS = 20000
 
-    hash.update(k => tree)
-  end
 
-  Benchmark.bmbm do |x|
-    trees.each do |k, tree|
-      x.report("finding in size #{BASE_SIZE * 10**k}") do
+  sizes = Array.new(10) { |k| BASE_SIZE * 2**k }
+
+  # scanl is like reduce but it returns an array containing
+  # all the intermediate results
+  trees = sizes.scanl(EmptyTree) do |tree, size|
+    size.times.reduce(tree) { |t, _| t.insert(rand(RAND_RANGE)) }
+  end.drop(1)
+
+  puts "\nBenchmarking"
+
+  Benchmark.bm(30) do |x|
+    trees.each_with_index do |tree, k|
+      x.report("finding in size #{tree.size}") do
         ITERATIONS.times do
-          tree.include?(rand(-MAX_RAND..MAX_RAND))
+          tree.include?(rand(RAND_RANGE))
         end
       end
     end
-    trees.each do |k, tree|
-      x.report("inserting in size #{BASE_SIZE * 10**k}") do
+    trees.each_with_index do |tree, k|
+      x.report("inserting in size #{tree.size}") do
         ITERATIONS.times do
-          tree.insert(rand(-MAX_RAND..MAX_RAND))
+          tree.insert(rand(RAND_RANGE))
         end
       end
     end
   end
-
-  # tree = EmptyTree
-  # (1...10).each do |n|
-  #   tree = tree.insert(n)
-  # end
-
-  # puts PP.pp(tree.sexp, '', 10)
-  # puts "Max value: #{tree.max}"
-
-  # tree = tree.remove(5).remove(8)
-
-  # puts PP.pp(tree.sexp, '', 10)
 end
