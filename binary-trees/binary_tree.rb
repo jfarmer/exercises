@@ -16,9 +16,11 @@ class BinaryTree
   attr_accessor :value, :left, :right
 
   def initialize(value = nil)
+    @value = value
   end
 
   def each(&block)
+    in_order(&block)
   end
 
   # Implement pre-order traversal of the tree
