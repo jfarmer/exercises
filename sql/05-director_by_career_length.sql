@@ -43,5 +43,4 @@ FROM directors d
 JOIN name n
   ON (n.id = d.person_id)
 GROUP BY n.id
-ORDER BY career_length DESC
-LIMIT 100;
+ORDER BY career_length DESC, director_name ASC;
