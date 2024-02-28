@@ -1,0 +1,245 @@
+AssetCacheTetheratorService(8) - Service to support Internet sharing with USB devices
+BootCacheControl(8)      - provides control of caches used during startup
+DevToolsSecurity(8)      - Change the security authorization policies for developer systems
+KernelEventAgent(8)      - utility to provide user interface on behalf of the kernel
+PasswordService(8)       - Mac OS X Server Password Server daemon
+RFBEventHelperd(8)       - Screen Sharing app helper daemon
+SSInvitationAgent(8)     - Screen Sharing Invitation Agent
+VNCPrivilegeProxy(8)     - Screen sharing server helper daemon
+WirelessRadioManagerd(8) - Wireless Radio Manager daemon
+ab(1)                    - Apache HTTP server benchmarking tool
+ac(8)                    - connect time accounting
+accton(8)                - enable/disable system accounting
+amt(8)                   - Abstract Machine Test Utility
+anvil(8)                 - Postfix session count and request rate control
+apachectl(8)             - Apache HTTP Server Control Interface
+appsleepd(8)             - app sleep daemon
+arp(8)                   - address resolution display and control
+aslmanager(8)            - Apple System Log data life-cycle manager
+asr(8)                   - Apple Software Restore; copy volumes (e.g. from disk images)
+audit(8)                 - audit management utility
+auditd(8)                - audit log management daemon
+auditreduce(1)           - select records from audit trail files
+automount(8)             - mount autofs on the appropriate mount points
+autoscan(1)              - Generate a preliminary configure.ac
+autoupdate(1)            - Update a configure.ac to a newer Autoconf
+avbdeviced(1)            - peristent entity management for AVB
+bless(8)                 - set volume bootability and startup disk options
+bounce(8)                - Postfix delivery status reports
+cfprefsd(8)              - defaults server
+chat(8)                  - Automated conversational script with a modem
+checkgid(8)              - validate group identifiers
+chown(8)                 - change file owner and group
+chroot(8)                - change root directory
+cleanup(8)               - canonicalize and enqueue Postfix message
+createhomedir(1)         - create and populate home directories on the local computer
+cron(8)                  - daemon to execute scheduled commands (Vixie Cron)
+cupsaccept(8), cupsaccept/cupsreject(8) - accept/reject jobs sent to a destination
+cupsctl(8)               - configure cupsd.conf options
+cupsd(8)                 - cups scheduler
+cupsd-helper(8)          - cupsd helper programs (deprecated)
+cupsdisable(8), cupsenable(8) - stop/start printers and classes
+cupsfilter(8)            - convert a file to another format using cups filters (deprecated)
+dbmmanage(1)             - Manage user authentication files in DBM format
+ddns-confgen(8)          - ddns key generation tool
+deleted_helper(8)        - The APFS purge daemon
+dev_mkdb(8)              - create /dev database
+discard(8)               - Postfix discard mail delivery agent
+diskutil(8)              - modify, verify and repair local disks
+distnoted(8)             - distributed notification server
+dnctl(8)                 - Traffic shaper control program
+dnsblog(8)               - Postfix DNS white/blacklist logger
+dot_clean(1)             - Merge._* files with corresponding native files
+dsconfigad(8)            - retrieves/changes configuration for Active Directory
+dsconfigldap(1)          - LDAP server configuration/binding add/remove tool
+dseditgroup(8)           - group record manipulation tool
+dsenableroot(8)          - enables or disables the root account
+dspluginhelperd(8)       - support daemon for legacy DirectoryService plugins
+dtrace(1)                - dynamic tracing compiler and tracing utility
+edquota(8)               - edit user quotas
+error(8)                 - Postfix error/retry mail delivery agent
+fcgistarter(8)           - Start a FastCGI program
+fdisk(8)                 - DOS partition maintenance program
+filecoordinationd(8)     - system-wide file access coordination
+firmwarepasswd(8)        - tool for setting and removing firmware passwords on a system
+flush(8)                 - Postfix fast flush server
+gchown(1), chown(1)      - change file owner and group
+gchroot(1), chroot(1)    - run command or interactive shell with special root directory
+gpt(8)                   - GUID partition table maintenance utility
+graphicssession(1)       - graphics session initialization utility
+gssd(8)                  - Generic Security Services Daemon
+hdik(8)                  - lightweight tool to attach and mount disk images in-kernel
+htcacheclean(8)          - Clean up the disk cache
+htdbm(1)                 - Manipulate DBM password databases
+htdigest(1)              - manage user files for digest authentication
+htpasswd(1)              - Manage user files for basic authentication
+httpd(8)                 - Apache Hypertext Transfer Protocol Server
+httpd-wrapper(8)         - Wrapper script for httpd web server
+httxt2dbm(1)             - Generate dbm files for use with RewriteMap
+install-tl(1)            - TeX Live cross-platform installer
+installer(8)             - system software and package installer tool
+installer-core(8)        - helper for installer tool
+ioalloccount(8)          - Summarize IOKit memory usage
+ioreg(8)                 - show I/O Kit registry
+iostat(8)                - report I/O statistics
+ipconfig(8)              - view and control IP configuration state
+kadmin(8)                - Kerberos administration utility
+kadmin.local(8)          - compatiblity shim for MIT Kerberos kadmin.local
+kcditto(8)               - macOS kernel management helper tool
+kdcsetup(8)              - Kerberos Open Directory Single Sign On
+kextcache(8)             - create kext cache files
+kextfind(8)              - find kernel extensions (kexts) based on a variety of criteria and print information
+kextlibs(8)              - find OSBundleLibraries needed by a kext
+kextstat(8)              - display status of loaded kernel extensions (kexts)
+klist_cdhashes(8)        - reports information about kexts that have been approved via SKEL
+krbservicesetup(8)       - Kerberos Open Directory Single Sign On
+ktutil(8)                - manage Kerberos keytabs
+languagesetup(1)         - Set the primary language for the system
+local(8)                 - Postfix local mail delivery
+localemanager(8)         - Configure OpenDirectory Server Locales
+logresolve(1)            - Resolve IP-addresses to hostnames in Apache log files
+lpadmin(8)               - configure cups printers and classes
+lpc(8)                   - line printer control program (deprecated)
+lpinfo(8)                - show available devices or drivers (deprecated)
+lpmove(8)                - move a job or all jobs to a new destination
+lsof(8)                  - list open files
+mDNSResponder(8)         - Multicast and Unicast DNS daemon
+mDNSResponderHelper(8)   - mDNS privilege separation helper
+master(8)                - Postfix master process
+mediasharingd(8)         - The media sharing daemon
+mkextunpack(8)           - extract or list the contents of a multikext (mkext) archive
+mkfile(8)                - create a file
+mkpassdb(8)              - Mac OS X Server Password Server database creation tool
+mtree(8)                 - map a directory hierarchy
+ndp(8)                   - control/diagnose IPv6 neighbor discovery protocol
+netbiosd(8)              - NetBIOS protocol daemon
+netstat(1)               - show network status
+networksetup(8)          - configuration tool for network settings in System Preferences
+newsyslog(8)             - maintain system log files to manageable sizes
+nfs4mapid(8)             - shows NFSv4 mappings from uids or gids to over the wire string names and string names to uids or gids
+nlcontrol(8)             - NETLOGON secure channel utility
+notifyd(8)               - notification server
+npm-audit(1)             - Run a security audit
+nvram(8)                 - manipulate firmware NVRAM variables
+ocspd(1)                 - OCSP and CRL Daemon
+oqmgr(8)                 - old Postfix queue manager
+otctl(1)                 - Command line interface do provide diagnostic information for iCloud Keychain syncing
+pdisk(8)                 - Apple partition table editor
+periodic(8)              - run periodic system functions
+periodic-wrapper(8)      - manage periodic activity
+perldtrace(1)            - Perl's support for DTrace
+pfd(8)                   - daemon for network firewall and Internet sharing configuration
+pickup(8)                - Postfix local mail pickup
+pipe(8)                  - Postfix delivery to external command
+pkgbuild(1)              - Build a macOS Installer component package from on-disk files
+pkgutil(1)               - Query and manipulate Mac OS X Installer packages and receipts
+plockstat(1)             - front-end to DTrace to print statistics about POSIX mutexes and read/write locks
+postalias(1)             - Postfix alias database maintenance
+postcat(1)               - show Postfix queue file contents
+postconf(1)              - Postfix configuration utility
+postdrop(1)              - Postfix mail posting utility
+postfix(1)               - Postfix control program
+postfix-tls(1)           - Postfix TLS management
+postkick(1)              - kick a Postfix service
+postlock(1)              - lock mail folder and execute command
+postlog(1)               - Postfix-compatible logging utility
+postmap(1)               - Postfix lookup table management
+postmulti(1)             - Postfix multi-instance manager
+postqueue(1)             - Postfix queue control
+postscreen(8)            - Postfix zombie blocker
+postsuper(1)             - Postfix superintendent
+pppd(8)                  - Point-to-Point Protocol Daemon
+praudit(1)               - print the contents of audit trail files
+productbuild(1)          - Build a product archive for the macOS Installer or the Mac App Store
+productsign(1)           - Sign a macOS Installer product archive
+proxymap(8)              - Postfix lookup table proxy server
+purge(8)                 - force disk cache to be purged (flushed and emptied)
+pwd_mkdb(8)              - generate the password databases
+qmgr(8)                  - Postfix queue manager
+qmqpd(8)                 - Postfix QMQP server
+quotaon(8), quotaoff(8)  - turn filesystem quotas on and off
+racoon(8)                - IKE (ISAKMP/Oakley) key management daemon
+rarpd(8)                 - Reverse ARP Daemon
+repquota(8)              - summarize quotas for a file system
+rotatelogs(8)            - Piped logging program to rotate Apache logs
+rpc.lockd(8)             - NFS file locking daemon
+rpc.statd(8)             - host status monitoring daemon
+rpcbind(8)               - portmap
+rpcinfo(8)               - report RPC information
+rtadvd(8)                - router advertisement daemon
+sa(8)                    - print system accounting statistics
+sc_auth(8)               - SmartCard authorization setup script
+scache(8)                - Postfix shared connection cache server
+screencapture(1)         - capture images from the screen and save them to a file or the clipboard
+screencaptureui(8)       - screencapture daemon
+scselect(8)              - Select system configuration location
+scutil(8)                - Manage system configuration parameters
+securityd(1)             - Security context daemon for keychain and cryptographic operations
+securityd_service(8)     - helper process to securityd to unlock keybag
+sendmail(1)              - Postfix to Sendmail compatibility interface
+setkey(8)                - manually manipulate the IPsec SA/SP database
+setquota(1)              - Sets home directory quotas on the local computer
+sharing(8)               - create share points for smb services
+sharingd(8)              - Sharing Daemon that enables AirDrop, Handoff, Instant Hotspot, Shared Computers, and Remote Disc in the Finder
+showq(8)                 - list the Postfix mail queue
+skywalkctl(8)            - Interact with Skywalk subsystem
+slapacl(8)               - Check access to a list of attributes
+slapadd(8)               - Add entries to a SLAPD database
+slapauth(8)              - Check a list of string-represented IDs for LDAP authc/authz
+slapcat(8)               - SLAPD database to LDIF utility
+slapconfig(8)            - -- tool to configure slapd and related daemons
+slapdn(8)                - Check a list of string-represented LDAP DNs based on schema syntax
+slapindex(8)             - Reindex entries in a SLAPD database
+slappasswd(8)            - OpenLDAP password utility
+slapschema(8)            - SLAPD in-database schema checking utility
+slaptest(8)              - Check the suitability of the OpenLDAP slapd configuration
+smbd(8)                  - SMB server daemon
+smbdiagnose(8)           - gather information to aid in diagnosing SMB file sharing issues
+smtp(8)                  - Postfix SMTP+LMTP client
+smtpd(8)                 - Postfix SMTP server
+snmpd(8)                 - daemon to respond to SNMP request packets
+snmptrapd(8)             - Receive and log SNMP trap messages
+sntpd(8)                 - very Simple Network Time Protocol server daemon
+softwareupdate(8)        - system software update tool
+spawn(8)                 - Postfix external command spawner
+spctl(8)                 - SecAssessment system policy security
+spindump(8)              - Profile entire system during a time interval
+spindump_agent(8)        - helper agent for spindump(8)
+spray(8)                 - send many packets to host
+sshd(8)                  - OpenSSH daemon
+sso_util(8)              - Kerberos Open Directory Single Sign On
+suhelperd(8)             - Helper daemon for softwareupdate - no user initiated interface
+sysctl(8)                - get or set kernel state
+syslogd(8)               - Apple System Log server
+system_profiler(8)       - reports system hardware and software configuration
+systemkeychain(8)        - creates system keychains and allows keychains to unlock keychains
+systemsetup(8)           - configuration tool for certain machine settings in System Preferences
+systemstats(8)           - summarize system stats
+taskpolicy(8)            - execute a program with an altered I/O or scheduling policy or change settings of already running process
+tcpdump(1)               - dump traffic on a network
+tlsmgr(8)                - Postfix TLS session cache and PRNG manager
+tlsproxy(8)              - Postfix TLS proxy
+traceroute(8)            - print the route packets take to network host
+traceroute6(8)           - print the route IPv6 packets will take to a network node
+traptoemail(1)           - snmptrapd handler script to convert snmp traps into emails
+trivial-rewrite(8)       - Postfix address rewriting and resolving daemon
+uasysdiagnose(8), uasysdiagone(8) - Produce system diagnostics for UserActivity.framework
+universalaccessd(8)      - universal access server
+usernoted(8)             - Notification Center daemon
+uuchk(8)                 - display information read from the UUCP configuration files
+uucico(8)                - UUCP file transfer daemon
+uuconv(1)                - convert UUCP configuration files
+uusched(8)               - schedule the uucp file transport program
+uuxqt(8)                 - UUCP execution daemon
+verify(8)                - Postfix address verification server
+vifs(8)                  - safely edit fstab
+vipw(8)                  - edit the password file
+virtual(8)               - Postfix virtual domain mail delivery agent
+visudo(8)                - edit the sudoers file
+vpnd(8)                  - Mac OS X VPN service daemon
+vsdbutil(8)              - manipulates the volume status DB
+weakpass_edit(8)         - Mac OS X Server Password Server weak password dictionary insertion tool
+wfsctl(8)                - WebDAV File Sharing control utility
+xscertadmin(8)           - -- process Certificate Revocation Lists in an OD environment
+zdump(8)                 - timezone dumper
+zic(8)                   - timezone compiler

@@ -51,6 +51,6 @@ This is a list of commands that one uses frequently when writing shell scripts a
 
    You can use `sed` to produce an expression like `-44 - -89` and then use `bc` to evaluate the expression.
 1. Write a script that analyzes your command line history and prints out the most commonly used commands. For the first version, have it only be the left-most command then modify it so it recognizes other commands in a pipeline.
-1. Using the `gh` command, write a one-liner that clones all of a GitHub user's repositories in parallel. Both `xargs` and the `paralell` command can execute things in parallel.
+1. Using the `gh` command, write a one-liner that clones all of a GitHub user's repositories in parallel. Both `xargs` and the `parallel` command can execute things in parallel.
 1. Find a Node project and look at the `package-lock.json`, which contains all of the project's dependencies. Write a one-liner that parses it and prints out links to all the GitHub project URLs.
 1. Use `curl` to pull down the text of Moby Dick from Project Gutenberg (<https://www.gutenberg.org/files/2701/2701-0.txt>). Write a one-liner that prints out the 100 most common words. Modify the one-liner to strip out [stop words](https://en.wikipedia.org/wiki/Stop_word) like "the", "an", "of", etc.
