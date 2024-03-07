@@ -11,6 +11,12 @@ npm install
 npm test
 ```
 
+You can run the tests for a specific directory, too, like so:
+
+```console
+npm test 01_characters_and_quantifiers
+```
+
 Each directory contains an `index.js` file that exports the relevant variables. Edit the regular expressions but don't change the variable names — the automated tests depend on the names being what they are.
 
 Feel free to use tools like [Regexr][url-regexr] to test your regular expressions.
