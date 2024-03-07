@@ -2,8 +2,18 @@
 
 ## Contents<!-- omit in toc -->
 
+- [Regular Expressions](#regular-expressions)
+- [CLI](#cli)
 - [Binary Trees](#binary-trees)
 - [Recursion](#recursion)
+
+## Regular Expressions
+
+See [regex](regex/)
+
+## CLI
+
+See [cli](cli/).
 
 ## Binary Trees
 

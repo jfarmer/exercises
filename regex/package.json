@@ -1,0 +1,16 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "A series of regular expression exercises in JavaScript",
+  "scripts": {
+    "test": "npx jest ."
+  },
+  "author": "Jesse Farmer",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/preset-env": "^7.24.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
