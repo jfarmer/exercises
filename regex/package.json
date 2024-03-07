@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A series of regular expression exercises in JavaScript",
   "scripts": {
-    "test": "npx jest ."
+    "test": "npx jest"
   },
   "author": "Jesse Farmer",
   "license": "ISC",
