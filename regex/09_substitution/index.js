@@ -19,14 +19,14 @@
 //
 // NOTE: In this exercise, the string may contain text other
 // than the email address(es).
-export const emailRegex = /EDIT_ME/;
-export const emailReplacement = '';
+export const emailRegex = /\b[\w\.]+@[\w\.]+\.[\w]+\b/gm;
+export const emailReplacement = '<<redacted>>';
 
 // Exercise 37: Strip html tags out of text
 // For example, <b>bold statement</b> should become
 // "bold statement" (no quotes).
 // Note: strings may be multi-line
-export const htmlTagRegex = /EDIT_ME/;
+export const htmlTagRegex = /<[^>]+>/gm;
 export const htmlTagReplacement = '';
 
 // Exercise 38: Substitute any multiple whitespace
@@ -39,8 +39,8 @@ export const htmlTagReplacement = '';
 // your answer in the course repository.
 // https://github.com/jfarmer/exercises/tree/main/regex/09_substitution
 //
-// --------> const multipleWhitespaceRegex = //;
-// --------> const multipleWhitespaceReplacement = '';
+export const multipleWhitespaceRegex = /\s{2,}/gs;
+export const multipleWhitespaceReplacement = ' ';
 
 
 // Exercise 39: Strip off any whitespace characters
@@ -50,8 +50,8 @@ export const htmlTagReplacement = '';
 // Note: This one is tricky! How do you keep the "middle"
 // part from gobbling up the outer space, and yet
 // still respect spaces in the middle?
-export const outerWhitespaceRegex = /EDIT_ME/;
-export const outerWhitespaceReplacement = '';
+export const outerWhitespaceRegex = /^\s*(.*\S)\s*$/;
+export const outerWhitespaceReplacement = '$1';
 
 // Exercise 40: Switch a list of names (separated by newlines)
 // from "first last" to "last, first".
@@ -71,8 +71,8 @@ export const outerWhitespaceReplacement = '';
 // Freeman, Morgan
 // Finch-Fletchley, Justin
 // O'Connor, Flannery
-export const nameSwitchRegex = /EDIT_ME/;
-export const nameSwitchReplacement = '';
+export const nameSwitchRegex = /^(\w+) ([\w\-\']+)$/gm;
+export const nameSwitchReplacement = '$2, $1';
 
 // Exercise 41: Building on the last exercise: Put last name
 // first even if there are more than two words in the name
@@ -80,5 +80,5 @@ export const nameSwitchReplacement = '';
 // For example,
 //   Carlos Alberto Torres → Torres, Carlos Alberto
 //   Harriet Beecher Stowe → Stowe, Harriet Beecher
-export const multiNameSwitchRegex = /EDIT_ME/;
-export const multiNameSwitchReplacement = '';
+export const multiNameSwitchRegex = /^([\w ]+) ([\w\-\']+)$/gm;
+export const multiNameSwitchReplacement = '$2, $1';
