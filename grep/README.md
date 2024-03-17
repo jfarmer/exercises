@@ -593,12 +593,12 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 1. Search recursively and display the lines containing `ello`. Output should not have filename prefix.
 
     ```console
-    # Put your command here
+    grep -rh 'ello'
     ```
 
     ```console
     # Sample output
-    print("Hello, Python!")
+        print("Hello, Python!")
     echo "Hello, Bash!"
     yellow
     yellow
@@ -607,7 +607,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 2. Search recursively and list the names of files containing `blue` or `on` or a double quote character. Match all of these terms only at the end of a line.
 
     ```console
-    # Put your command here
+    grep -rlE '(blue|on|")$'
     ```
 
     ```console
@@ -622,7 +622,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 3. Search recursively and list the names of files containing `blue`, but do not search within the `backups` directory.
 
     ```console
-    # Put your command here
+    grep -rl --exclude-dir='backups' 'blue'
     ```
 
     ```console
@@ -635,7 +635,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 4. Search recursively within the `backups` directory and list the names of files containing `red`. Symbolic links found in this directory should be searched as well.
 
     ```console
-    # Put your command here
+    grep -Rl 'red' backups
     ```
 
     ```console
@@ -647,7 +647,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 5. Search recursively and list the names of files that do *not* contain `greeting` or `blue`. Symbolic links should be searched as well.
 
     ```console
-    # Put your command here
+    grep -RLE 'greeting|blue'
     ```
 
     ```console
@@ -662,7 +662,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 6. Search for files containing `red` or `ello` recursively, but do not list the file if it also contains `greeting`.
 
     ```console
-    # Put your command here
+    grep --null -rlE 'red|ello' | xargs -r0 grep -L 'greeting'
     ```
 
     ```console
@@ -675,7 +675,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 7. Search recursively only within filenames ending with `.txt` and display the names of files containing `red`. Symbolic links should be searched as well.
 
     ```console
-    # Put your command here
+    grep -SRl --include='*.txt' 'red'
     ```
 
     ```console
@@ -688,7 +688,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 8. Search recursively only within filenames ending with `.txt` but not if the name has a space character. Display the names of files containing `red`. Symbolic links should be searched as well.
 
     ```console
-    # Put your command here
+    grep -SRl --include='*.txt' --exclude='* *' 'red'
     ```
 
     ```console
@@ -706,7 +706,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 12. Use a combination of `find` and `grep` commands to display lines containing a whole word `Hi` only for symbolic links.
 
     ```console
-    # Put your command here
+    find -type l -exec grep -w 'Hi' {} +
     ```
 
     ```console
@@ -718,7 +718,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 13. Search recursively and list the names of files that contain `Hello` or `blue`. Symbolic links should be searched as well. Do not search within `python` or `backups` directories.
 
     ```console
-    # Put your command here
+    grep -SRlE --exclude-dir='python' --exclude-dir='backups' 'Hello|blue'
     ```
 
     ```console
@@ -733,7 +733,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 14. Search recursively only within filenames ending with `.txt` and count the total number of lines containing `car` or `blue` or a digit character. Symbolic links should be searched as well.
 
     ```console
-    # Put your command here
+    grep -SRE --include='*.txt' 'car|blue|[0-9]' | wc -l
     ```
 
     ```console
@@ -744,7 +744,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 15. Display lines containing `Hello` or `red` only from files in the current hierarchy, i.e. don't search recursively. Symbolic links should be searched as well.
 
     ```console
-    # Put your command here
+    grep -d skip 'Hello\|red' *
     ```
 
     ```console
@@ -756,7 +756,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 16. Search recursively for files containing `blue` as well as `yellow` anywhere in the file, but do not list the file if it also contains `teal`.
 
     ```console
-    # Put your command here
+    grep --null -rl 'blue' | xargs -r0 grep --null -l 'yellow' | xargs -r0 grep -L 'teal'
     ```
 
     ```console
