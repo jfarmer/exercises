@@ -279,7 +279,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 4. For the input file `patterns.txt`, match all lines containing `car` but not as a whole word.
 
     ```console
-    # Put your command here
+    grep -E '\Bcar|car\B' patterns.txt
     ```
 
     ```console
@@ -294,7 +294,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 5. Count the total number of times the whole words `removed` or `rested` or `received` or `replied` or `refused` or `retired` are present in the `patterns.txt` file.
 
     ```console
-    # Put your command here
+    grep -owE 're(ceiv|mov|pli|fus|tir|st)ed' patterns.txt | wc -l
     ```
 
     ```console
@@ -318,7 +318,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 7. From the input file `patterns.txt`, extract all whole lines having the same first and last word character.
 
     ```console
-    # Put your command here
+    grep -E '^(\w)(.*\1)?$' patterns.txt
     ```
 
     ```console
@@ -333,7 +333,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 8. For the input file `patterns.txt`, match all lines containing `*[5]` literally.
 
     ```console
-    # Put your command here
+    grep -F '*[5]' patterns.txt
     ```
 
     ```console
@@ -363,7 +363,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 12. For the input file `patterns.txt`, display all lines starting with `hand` and ending immediately with `s` or `y` or `le` or no further characters.
 
     ```console
-    # Put your command here
+    grep -E '^hand([sy]|le)?$' patterns.txt
     ```
 
     ```console
@@ -411,7 +411,7 @@ GNU Grep's `ggrep --help` output is more useful than BSD grep's `--help` output,
 17. From the input file `patterns.txt`, extract all hexadecimal sequences with a minimum of four characters. Match `0x` as an optional prefix, but shouldn't be counted for determining the length. Match the characters case insensitively, and the sequences shouldn't be surrounded by other word characters.
 
     ```console
-    # Put your command here
+    grep -iowE '(0x)?[0-9a-f]{4,}' patterns.txt
     ```
 
     ```console
