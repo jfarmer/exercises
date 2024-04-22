@@ -19,8 +19,31 @@
  *   C -> [B, A]
  */
 function graphComplement(graph) {
+  const complement = {};
 
+  // First, we need to get a list of all vertices in the graph
+  const vertices = Object.keys(graph);
+
+  // Initialize the complement graph with empty arrays for each vertex
+  vertices.forEach(vertex => {
+      complement[vertex] = [];
+  });
+
+  // Now, for each vertex, find out which vertices it doesn't have an edge to and add those to its list in the complement graph
+  vertices.forEach(vertex => {
+      const edges = new Set(graph[vertex]); // Convert current edges to a set for quick lookup
+      vertices.forEach(otherVertex => {
+          if (!edges.has(otherVertex) && vertex !== otherVertex) {
+              // Add edge if it's not in the original graph and it's not a self-loop
+              complement[vertex].push(otherVertex);
+          }
+      });
+  });
+
+  return complement;
 }
+
+
 
 module.exports = {
   graphTranspose,
