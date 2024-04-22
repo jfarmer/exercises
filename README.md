@@ -6,6 +6,7 @@
 - [CLI](#cli)
 - [Grep](#grep)
 - [Binary Trees](#binary-trees)
+- [Graphs](#graphs)
 - [Recursion](#recursion)
 
 ## Regular Expressions
@@ -23,6 +24,10 @@ See `README` in [grep](grep/)
 ## Binary Trees
 
 See `README` in [binary-trees](binary-trees/).
+
+## Graphs
+
+See `README` in [graphs](graphs/).
 
 ## Recursion
 
