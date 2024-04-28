@@ -46,5 +46,5 @@ function graphComplement(graph) {
 
 
 module.exports = {
-  graphTranspose,
+  graphComplement,
 }

@@ -35,7 +35,12 @@ function graphDFS(graph, { preOrderCallback, postOrderCallback }) {
   }
 }
 
+function graphDFSPostOrder(graph, postOrderCallback) {
+  return graphDFS(graph, { postOrderCallback });
+}
+
 module.exports = {
   graphDFSFromNode,
   graphDFS,
+  graphDFSPostOrder,
 }
