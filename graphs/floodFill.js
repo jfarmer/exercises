@@ -20,10 +20,10 @@
  * ]
  */
 function floodFill(screen, startX, startY, newColor, curColor = null) {
-  let height = screen.length;
-  let width = screen[0].length;
+  let rows = screen.length;
+  let cols = screen[0].length;
 
-  if (startX < 0 || startY < 0 || startX >= screen.length || startY >= screen[0].length) {
+  if (startX < 0 || startY < 0 || startX >= rows || startY >= cols) {
     return;
   }
 
