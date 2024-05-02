@@ -19,8 +19,8 @@ class PriorityQueue {
     return this._heap.peek();
   }
 
-  decreasePriority(value, decreaseBy) {
-    this._heap.decreasePriority(value, decreaseBy);
+  decreasePriority(value, decreaseTo) {
+    this._heap.decreasePriority(value, decreaseTo);
 
     return this;
   }

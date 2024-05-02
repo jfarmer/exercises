@@ -69,9 +69,10 @@ class MinHeap {
 
     let min = this._heap[0];
     let lastItem = this._heap.pop();
+    this._map.delete(min.value);
 
     if (!this.isEmpty()) {
-      this._heap[0] = this._heap.pop();
+      this._heap[0] = lastItem;
       this._map.set(this._heap[0].value, 0);
       this._heapifyDown();
     }
@@ -79,10 +80,13 @@ class MinHeap {
     return min.value;
   }
 
-  decreasePriority(value, decreaseBy) {
+  decreasePriority(value, decreaseTo) {
     let idx = this._map.get(value);
-    this._heap[idx].priority -= decreaseBy;
-    this._heapifyUp();
+
+    if (decreaseTo < this._heap[idx].priority) {
+      this._heap[idx].priority = decreaseTo;
+      this._heapifyUp();
+    }
   }
 
   _heapifyDown() {
