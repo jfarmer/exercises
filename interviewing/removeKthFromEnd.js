@@ -84,7 +84,6 @@ if (require.main === module) {
   let list = prepend(11, prepend(22, prepend(33, prepend(44))));
 
   for (let i = 0; i <= 4; i++) {
-    console
     console.log('Removing %d from end', i);
     console.log(list);
     console.log(removeKthFromEnd(list, i));
