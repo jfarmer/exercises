@@ -6,8 +6,37 @@
  *
  * See: https://en.wikipedia.org/wiki/Trie
  */
-class Trie {
+
+class TrieNode {
   constructor() {
+    this.children = new Map();
+    this.isEndOfWord = false;
+  }
+
+  hasChild(char) {
+    return this.children.has(char);
+  }
+
+  getChild(char) {
+    return this.children.get(char);
+  }
+
+  addChild(char) {
+    if (!this.hasChild(char)) {
+      this.children.set(char, new TrieNode());
+    }
+
+    return this.getChild(char);
+  }
+}
+
+class Trie {
+  constructor(words = []) {
+    this.root = new TrieNode();
+
+    for (let word of words) {
+      this.insert(word);
+    }
   }
 
   /**
@@ -16,7 +45,13 @@ class Trie {
    * @param {string} word - The word to be inserted into the trie.
    */
   insert(word) {
+    let node = this.root;
 
+    for (let char of word) {
+      node = node.addChild(char);
+    }
+
+    node.isEndOfWord = true;
   }
 
   /**
@@ -26,6 +61,25 @@ class Trie {
    * @returns {boolean} - True if the word exists in the trie, false otherwise.
    */
   contains(word) {
+    let node = this.root;
+
+    for (let char of word) {
+      if (!node.hasChild(char)) {
+        return false;
+      }
+
+      node = node.getChild(char);
+    }
+
+    return node.isEndOfWord;
+  }
+
+  has(word) {
+    return contains(word);
+  }
+
+  includes(word) {
+    return contains(word);
   }
 
   /**
@@ -36,5 +90,27 @@ class Trie {
    * @returns {boolean}
    */
   containsPrefix(prefix) {
+    let node = this.root;
+
+    for (let char of prefix) {
+      if (!node.hasChild(char)) {
+        return false;
+      }
+
+      node = node.getChild(char);
+    }
+
+    return true;
   }
+}
+
+if (require.main === module) {
+  // Add your own tests here
+
+
+}
+
+module.exports = {
+  TrieNode,
+  Trie,
 }
