@@ -53,10 +53,15 @@ function isValidBST(tree) {
     return false;
   }
 
+  // Note: it's _not_ enough to just check whether left.value > tree.value
+  // because left could itself be a valid BST with a max value larger
+  // than tree.value
   if (max(left) > tree.value) {
     return false;
   }
 
+  // Same logic applies to the right tree, but we must ensure the
+  // smallest value in the right tree is less than tree.value
   if (min(right) < tree.value) {
     return false;
   }
