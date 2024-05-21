@@ -6,7 +6,7 @@ function reverseBits2(n) {
   while (current) {
     result <<= 1;
     result |= current & 1;
-    current >>>= 1;
+    current >>= 1;
     width--;
   }
 
@@ -30,5 +30,5 @@ function reverseBits(n) {
 if (require.main === module) {
   let n = 0b00011111111111111111111111111101;
 
-  console.log(reverseBits(n).toString(2));
+  console.log(reverseBits2(n).toString(2));
 }
