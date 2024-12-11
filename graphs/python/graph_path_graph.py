@@ -1,21 +1,13 @@
-from .graph_dfs import graph_dfs_from_node
+from graph_dfs import graph_dfs_from_node_pre
 
 def graph_path_graph(graph):
-    """
-    Given a graph, represented as an adjacency list, return its path graph.
-
-    The path graph of a graph G has the same vertices, but has (u, v) as an
-    edge if there's a path from u to v in the original graph.
-
-    See: https://en.wikipedia.org/wiki/Path_graph
-    """
     path_graph = { v : [] for v in graph }
 
     for vertex in graph:
-        graph_dfs_from_node(
+        graph_dfs_from_node_pre(
             graph,
             vertex,
-            pre_order_callback=path_graph[vertex].append,
+            path_graph[vertex].append,
             visited=set()
         )
 
