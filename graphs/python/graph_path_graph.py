@@ -1,15 +1,11 @@
 from graph_dfs import graph_dfs_from_node_pre
 
 def graph_path_graph(graph):
-    path_graph = { v : [] for v in graph }
+    path_graph = {v: [] for v in graph}
 
     for vertex in graph:
         graph_dfs_from_node_pre(
-            graph,
-            vertex,
-            path_graph[vertex].append,
-            visited=set()
-        )
+            graph, vertex, path_graph[vertex].append, visited=set())
 
     return path_graph
 
